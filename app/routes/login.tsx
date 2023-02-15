@@ -16,16 +16,21 @@ export async function loader({ request }: LoaderArgs) {
 
 const Login = () => {
   return (
-    <Form method="post">
-      <input type="email" name="email" required />
-      <input
-        type="password"
-        name="password"
-        autoComplete="current-password"
-        required
-      />
-      <button>Sign In</button>
-    </Form>
+    <>
+      <Form method="post">
+        <input type="email" name="email" required />
+        <input
+          type="password"
+          name="password"
+          autoComplete="current-password"
+          required
+        />
+        <button>Sign in with username and password</button>
+      </Form>
+      <Form action="/auth/google" method="post">
+        <button>Login with Google</button>
+      </Form>
+    </>
   );
 };
 
