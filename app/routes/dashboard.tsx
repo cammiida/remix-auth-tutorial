@@ -18,6 +18,9 @@ const Dashboard = () => {
 
   return (
     <div>
+      {user.photo && (
+        <img style={{ borderRadius: "50%" }} alt="profile" src={user.photo} />
+      )}
       <h1>Welcome to your personal dashboard, {user.username}!</h1>
     </div>
   );
